@@ -7,6 +7,4 @@ Uploaded tensorflow model - [link](https://huggingface.co/im-tsr/distilbert-fine
 
 ----
 
-*Model is not highly accurate for initial*
-
 ~by TSR
