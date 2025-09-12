@@ -11,7 +11,7 @@ Uploaded model - [HuggingFace Space](https://huggingface.co/spaces/im-tsr/sentim
 
 ## Model use via API
 
-```bash
+```python
 from gradio_client import Client
 
 def analyze_sentiment(text):
@@ -32,7 +32,7 @@ def analyze_sentiment(text):
     return {'label': highest[0].upper(), 'score': highest[1]}
 ```
 
-```bash
+```python
 analyze_sentiment("I love programming in Python!")
 ```
 
