@@ -1,10 +1,44 @@
 # DistilBERT Fine-Tuned Youtube Sentiment Analysis
 This model is fine-tuned on custom youtube comments corpus.
 
-Uploaded arrow dataset - [link](https://huggingface.co/datasets/im-tsr/comments-sentiments)
+Uploaded arrow dataset - [HuggingFace Dataset](https://huggingface.co/datasets/im-tsr/comments-sentiments)
 
-Uploaded fine-tuned model - [link](https://huggingface.co/im-tsr/distilbert-finetuned-youtube_sentiment_analysis)
+Uploaded fine-tuned model - [HuggingFace Model](https://huggingface.co/im-tsr/distilbert-finetuned-youtube_sentiment_analysis)
+
+Uploaded model - [HuggingFace Space](https://huggingface.co/spaces/im-tsr/sentiment-analysis)
 
 ----
+
+## Model use via API
+
+```bash
+from gradio_client import Client
+
+def analyze_sentiment(text):
+    client = Client("im-tsr/sentiment-analysis")
+    result = client.predict(
+            text=text,
+            api_name="/process_sentiment"
+    )
+
+    pos = result[0].split('>')[1].split('%')[0]
+    neg = result[1].split('>')[1].split('%')[0]
+    neu = result[2].split('>')[1].split('%')[0]
+
+    highest = max(f"Sentiment: Positive, Score: {pos}%", f"Sentiment: Negative, Score: {neg}%", f"Sentiment: Neutral, Score: {neu}%")
+
+    return highest
+```
+
+```bash
+analyze_sentiment("I love programming in Python!")
+```
+
+OUTPUT:
+```bash
+Sentiment: Positive, Score: 83.7%
+```
+
+---
 
 ~by TSR
