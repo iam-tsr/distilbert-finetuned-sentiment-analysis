@@ -38,7 +38,7 @@ analyze_sentiment("I love programming in Python!")
 
 OUTPUT:
 ```bash
-Sentiment: Positive, Score: 83.7%
+{'label': 'POSITIVE', 'score': 83.7}
 ```
 
 ---
