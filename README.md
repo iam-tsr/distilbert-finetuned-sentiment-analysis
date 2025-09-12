@@ -20,14 +20,16 @@ def analyze_sentiment(text):
             text=text,
             api_name="/process_sentiment"
     )
-
+    
     pos = result[0].split('>')[1].split('%')[0]
     neg = result[1].split('>')[1].split('%')[0]
     neu = result[2].split('>')[1].split('%')[0]
 
-    highest = max(f"Sentiment: Positive, Score: {pos}%", f"Sentiment: Negative, Score: {neg}%", f"Sentiment: Neutral, Score: {neu}%")
+    sentiment_dict = {"POSITIVE": float(pos), "NEUTRAL": float(neg), "NEGATIVE": float(neu)}
 
-    return highest
+    highest = max(sentiment_dict.items(), key=lambda x: x[1])
+
+    return {'label': highest[0].upper(), 'score': highest[1]}
 ```
 
 ```bash
