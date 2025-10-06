@@ -1,5 +1,5 @@
-# DistilBERT Fine-Tuned Youtube Sentiment Analysis
-This model is fine-tuned on custom youtube comments corpus.
+# DistilBERT Fine-Tuned Sentiment Analysis
+This model is fine-tuned on huge comments corpus.
 
 Uploaded arrow dataset - [HuggingFace Dataset](https://huggingface.co/datasets/im-tsr/comments-sentiments)
 
