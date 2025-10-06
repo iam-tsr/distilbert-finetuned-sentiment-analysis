@@ -5,7 +5,7 @@ Uploaded arrow dataset - [HuggingFace Dataset](https://huggingface.co/datasets/i
 
 Uploaded fine-tuned model - [HuggingFace Model](https://huggingface.co/im-tsr/distilbert-finetuned-youtube_sentiment_analysis)
 
-Uploaded model - [HuggingFace Space](https://huggingface.co/spaces/im-tsr/sentiment-analysis)
+Model inference space - [HuggingFace Space](https://huggingface.co/spaces/im-tsr/sentiment-analysis)
 
 ----
 
